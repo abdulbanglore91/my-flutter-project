@@ -78,34 +78,28 @@ class _DayFlashcardState extends State<DayFlashcard> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    // w-[85vw] max-w-[380px]
-    final cardWidth = (size.width * 0.85).clamp(0.0, 380.0);
-    // min-h-[65vh]
-    final minCardHeight = size.height * 0.65;
-
-    return AnimatedContainer(
+    // The PageView in DayCarousel (viewportFraction: 0.85) already constrains
+    // each page to 85 % of the viewport width and the full SizedBox height.
+    // We therefore let the card fill those tight constraints and avoid setting
+    // an explicit width or minHeight — that would fight the PageView layout
+    // and cause Expanded to receive an unbounded vertical axis.
+    //
+    // isFocused → opacity 1.0, unfocused → opacity 0.6 (mirrors scale-95/opacity-60).
+    return AnimatedOpacity(
       duration: const Duration(milliseconds: 500),
-      curve: Curves.easeOut,
-      width: cardWidth,
-      // scale-95 opacity-60 when not focused — translated as opacity only
-      // (layout-level scale would require a Transform, but that doesn't affect
-      // the card's slot in the PageView — visual effect is preserved via opacity)
-      child: Opacity(
-        opacity: widget.isFocused ? 1.0 : 0.6,
-        child: Container(
-          constraints: BoxConstraints(minHeight: minCardHeight),
-          padding: const EdgeInsets.all(AppSpacing.xl),
-          decoration: AppDecorations.glassCard,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildHeader(),
-              const SizedBox(height: AppSpacing.xl2),
-              Expanded(child: _buildBody()),
-              if (widget.schedule.classes.isNotEmpty) _buildFooter(),
-            ],
-          ),
+      opacity: widget.isFocused ? 1.0 : 0.6,
+      child: Container(
+        padding: const EdgeInsets.all(AppSpacing.xl),
+        decoration: AppDecorations.glassCard,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildHeader(),
+            const SizedBox(height: AppSpacing.xl2),
+            // Expanded fills the remaining bounded height given by PageView.
+            Expanded(child: _buildBody()),
+            if (widget.schedule.classes.isNotEmpty) _buildFooter(),
+          ],
         ),
       ),
     );

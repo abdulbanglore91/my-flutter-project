@@ -20,11 +20,6 @@ class NewClassForm extends StatefulWidget {
     required this.onCancel,
   });
 
-  // Factory constructor that creates the form and passes back the resulting
-  // ClassSession via [onSave]. Caller wraps in a StatefulWidget to hold state.
-  static _NewClassFormController createController() =>
-      _NewClassFormController();
-
   @override
   State<NewClassForm> createState() => _NewClassFormState();
 }
