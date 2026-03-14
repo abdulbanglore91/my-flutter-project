@@ -1,0 +1,39 @@
+# UniSchedule
+
+A university timetable companion app. The repository contains two codebases:
+
+1. **Flutter/Dart app** (`lib/`, `pubspec.yaml`) — the primary deliverable, fully translated from the React source. Run this locally with `flutter run`.
+2. **React/Next.js app** (`app/`, `components/`, `pages/`) — the original source, kept as a reference. Currently running in Replit's preview pane via `pnpm run dev` on port 5000.
+
+## Flutter Architecture
+
+```
+lib/
+├── main.dart                           App entry point
+├── app_theme.dart                      Colors, spacing, shadows, ThemeData
+├── models/                             Data models (ClassSession, DaySchedule, etc.)
+├── data/                               Sample data + all timetable utility functions
+├── screens/                            Root screen (HomeScreen)
+└── components/
+    ├── shared/                         GlassCard, PulsingDot, TypeBadge
+    ├── navigation/                     FloatingNav
+    └── timetable/                      All timetable-specific widgets
+```
+
+## Design Tokens
+
+- Background: `#0B0C10`
+- Cyan accent: `#66FCF1`
+- Purple accent: `#7B2CBF`
+- Font: Inter (via google_fonts)
+
+## Flutter Setup
+
+```bash
+flutter pub get
+flutter run
+```
+
+## React/Next.js (Replit preview)
+
+Running on port 5000 via `pnpm run dev`. Workflow: "Start application".
