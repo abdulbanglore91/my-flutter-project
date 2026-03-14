@@ -1,0 +1,220 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Deep Midnight Theme - Always Dark */
+:root {
+  --background: #0B0C10;
+  --foreground: #E8E8E8;
+  --card: rgba(26, 29, 36, 0.6);
+  --card-foreground: #E8E8E8;
+  --popover: rgba(26, 29, 36, 0.8);
+  --popover-foreground: #E8E8E8;
+  --primary: #66FCF1;
+  --primary-foreground: #0B0C10;
+  --secondary: rgba(123, 44, 191, 0.3);
+  --secondary-foreground: #E8E8E8;
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: rgba(255, 255, 255, 0.5);
+  --accent: #7B2CBF;
+  --accent-foreground: #E8E8E8;
+  --destructive: #FF6B6B;
+  --destructive-foreground: #0B0C10;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #66FCF1;
+  --chart-1: #66FCF1;
+  --chart-2: #7B2CBF;
+  --chart-3: #45A29E;
+  --chart-4: #C5C6C7;
+  --chart-5: #1F2833;
+  --radius: 1.25rem;
+  --sidebar: rgba(26, 29, 36, 0.8);
+  --sidebar-foreground: #E8E8E8;
+  --sidebar-primary: #66FCF1;
+  --sidebar-primary-foreground: #0B0C10;
+  --sidebar-accent: rgba(123, 44, 191, 0.3);
+  --sidebar-accent-foreground: #E8E8E8;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #66FCF1;
+  
+  /* Custom tokens for timetable */
+  --glass: rgba(26, 29, 36, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --cyan-glow: #66FCF1;
+  --purple-glow: #7B2CBF;
+  --dimmed: rgba(255, 255, 255, 0.35);
+}
+
+.dark {
+  --background: #0B0C10;
+  --foreground: #E8E8E8;
+  --card: rgba(26, 29, 36, 0.6);
+  --card-foreground: #E8E8E8;
+  --popover: rgba(26, 29, 36, 0.8);
+  --popover-foreground: #E8E8E8;
+  --primary: #66FCF1;
+  --primary-foreground: #0B0C10;
+  --secondary: rgba(123, 44, 191, 0.3);
+  --secondary-foreground: #E8E8E8;
+  --muted: rgba(255, 255, 255, 0.06);
+  --muted-foreground: rgba(255, 255, 255, 0.5);
+  --accent: #7B2CBF;
+  --accent-foreground: #E8E8E8;
+  --destructive: #FF6B6B;
+  --destructive-foreground: #0B0C10;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #66FCF1;
+  --chart-1: #66FCF1;
+  --chart-2: #7B2CBF;
+  --chart-3: #45A29E;
+  --chart-4: #C5C6C7;
+  --chart-5: #1F2833;
+  --sidebar: rgba(26, 29, 36, 0.8);
+  --sidebar-foreground: #E8E8E8;
+  --sidebar-primary: #66FCF1;
+  --sidebar-primary-foreground: #0B0C10;
+  --sidebar-accent: rgba(123, 44, 191, 0.3);
+  --sidebar-accent-foreground: #E8E8E8;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #66FCF1;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Glassmorphism styles */
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-nav {
+  background: rgba(26, 29, 36, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Glow effects */
+.cyan-glow {
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.4), 0 0 40px rgba(102, 252, 241, 0.2);
+}
+
+.purple-glow {
+  box-shadow: 0 0 20px rgba(123, 44, 191, 0.4), 0 0 40px rgba(123, 44, 191, 0.2);
+}
+
+.timeline-glow {
+  box-shadow: 0 0 8px rgba(102, 252, 241, 0.6);
+}
+
+/* Pulse animation for live indicator */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(102, 252, 241, 0.8), 0 0 16px rgba(102, 252, 241, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(102, 252, 241, 1), 0 0 32px rgba(102, 252, 241, 0.6);
+    transform: scale(1.15);
+  }
+}
+
+.pulse-dot {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Snap scroll for carousel */
+.snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card elevation shadows */
+.card-shadow {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 10px 20px -2px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* Active class highlight */
+.active-class {
+  background: linear-gradient(135deg, rgba(102, 252, 241, 0.12) 0%, rgba(123, 44, 191, 0.08) 100%);
+  border-color: rgba(102, 252, 241, 0.4);
+}
+
+/* Time-aware dimming */
+.class-passed {
+  opacity: 0.4;
+}
+
+.class-future {
+  opacity: 1;
+}
