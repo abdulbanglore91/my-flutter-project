@@ -1,6 +1,10 @@
 # UniSchedule — Flutter Setup Guide
-SYSTEM/ROLE INSTRUCTION: You are an Elite Senior Flutter Code Writer.
-CRITICAL: DO NOT attempt to run, build, or compile this project. DO NOT set up a Flutter environment. DO NOT execute any terminal commands. I am compiling and testing everything locally in Android Studio. Your ONLY job is to read my files to understand the context, write the corrected Dart code, and give it to me to copy and paste.
+🛑 CRITICAL SYSTEM OVERRIDE & ROLE RESET
+Stop analyzing the web build. I do not care about the web server, port 5000, or the blank white screen. I am compiling this app LOCALLY on my own computer using Android Studio.
+
+YOUR NEW ROLE: You are strictly an offline Code Writer.
+YOUR RESTRICTIONS: DO NOT run any more terminal commands. DO NOT try to build, run, or deploy this app.
+YOUR ONLY JOB: Read my Dart files, write the code to fix the 4 specific UI bugs listed below, and output the raw code blocks for me to copy and paste manually.
 
 ## Project Structure
 
