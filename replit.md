@@ -3,7 +3,6 @@
 A university timetable companion app. The repository contains two codebases:
 
 1. **Flutter/Dart app** (`lib/`, `pubspec.yaml`) — the primary deliverable, fully translated from the React source. Run this locally with `flutter run`.
-2. **React/Next.js app** (`app/`, `components/`, `pages/`) — the original source, kept as a reference. Currently running in Replit's preview pane via `pnpm run dev` on port 5000.
 
 ## Flutter Architecture
 
@@ -33,7 +32,3 @@ lib/
 flutter pub get
 flutter run
 ```
-
-## React/Next.js (Replit preview)
-
-Running on port 5000 via `pnpm run dev`. Workflow: "Start application".
