@@ -1,25 +1,6 @@
 # UniSchedule — Flutter Setup Guide
-
-## Prerequisites
-
-- Flutter SDK ≥ 3.3.0 — https://flutter.dev/docs/get-started/install
-- Dart SDK ≥ 3.3.0 (bundled with Flutter)
-
-## Run the app
-
-```bash
-# 1. Install dependencies
-flutter pub get
-
-# 2. Run on your connected device or emulator
-flutter run
-
-# 3. Build a release APK
-flutter build apk --release
-
-# 4. Build for iOS (macOS only)
-flutter build ios --release
-```
+SYSTEM/ROLE INSTRUCTION: You are an Elite Senior Flutter Code Writer.
+CRITICAL: DO NOT attempt to run, build, or compile this project. DO NOT set up a Flutter environment. DO NOT execute any terminal commands. I am compiling and testing everything locally in Android Studio. Your ONLY job is to read my files to understand the context, write the corrected Dart code, and give it to me to copy and paste.
 
 ## Project Structure
 
@@ -58,12 +39,12 @@ lib/
 
 ## Design Tokens (from app_theme.dart)
 
-| Token | Value | React Source |
-|-------|-------|-------------|
-| `AppColors.background` | `#0B0C10` | `bg-[#0B0C10]` |
-| `AppColors.cyan` | `#66FCF1` | `bg-[#66FCF1]` |
-| `AppColors.purple` | `#7B2CBF` | `bg-[#7B2CBF]` |
-| `AppColors.purpleLight` | `#C77DFF` | `text-[#C77DFF]` |
-| `AppColors.danger` | `#FF6B6B` | `text-[#FF6B6B]` |
-| `AppColors.foreground` | `#E8E8E8` | `text-foreground` |
-| `AppColors.mutedForeground` | `#6B7280` | `text-[var(--muted-foreground)]` |
+| Token | Value |
+|-------|-------|
+| `AppColors.background` | `#0B0C10` |
+| `AppColors.cyan` | `#66FCF1` |
+| `AppColors.purple` | `#7B2CBF` |
+| `AppColors.purpleLight` | `#C77DFF` |
+| `AppColors.danger` | `#FF6B6B` |
+| `AppColors.foreground` | `#E8E8E8` |
+| `AppColors.mutedForeground` | `#6B7280` | 
